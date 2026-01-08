@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF與音訊資源中心</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- PDF.js 庫 -->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.min.js"></script>
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>知識資源平台</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">首頁</a></li>
+                    <li><a href="#about">關於我</a></li>
+                    <li><a href="#resources">資源</a></li>
+                    <li><a href="#contact">聯繫</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 關於我 -->
+        <section id="about" class="intro-section">
+            <h2>關於我</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>我是 [您的名字]，一名熱愛學習與分享的知識工作者。</p>
+                    <p>這個平台整理了我收集的PDF文件和音訊資源，希望對您有所幫助。</p>
+                    <p>專長領域：網頁開發、數位學習、知識管理</p>
+                </div>
+                <div class="external-links">
+                    <h3>外部連結</h3>
+                    <ul>
+                        <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+                        <li><a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://yourportfolio.com" target="_blank">作品集</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 資源展示區（您提供的部分） -->
+        <section id="resources" class="resources-section">
+            <h2>資源瀏覽</h2>
+            
+            <div class="viewers-container">
+                <!-- PDF 查看器 -->
+                <div class="viewer pdf-viewer">
+                    <div class="viewer-header">
+                        <h3>PDF 文件</h3>
+                        <div class="controls">
+                            <select id="pdf-select" class="dropdown">
+                                <option value="">請選擇 PDF 文件</option>
+                            </select>
+                            <div class="nav-buttons">
+                                <button id="pdf-prev" class="nav-btn">上一頁</button>
+                                <span id="pdf-page-info">第 1 頁 / 共 1 頁</span>
+                                <button id="pdf-next" class="nav-btn">下一頁</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewer-content">
+                        <canvas id="pdf-canvas"></canvas>
+                    </div>
+                </div>
+
+                <!-- YouTube 播放器 -->
+                <div class="viewer youtube-viewer">
+                    <div class="viewer-header">
+                        <h3>YouTube 音訊</h3>
+                        <div class="controls">
+                            <select id="youtube-select" class="dropdown">
+                                <option value="">請選擇 YouTube 音訊</option>
+                            </select>
+                            <div class="nav-buttons">
+                                <button id="youtube-prev" class="nav-btn">上一個</button>
+                                <button id="youtube-next" class="nav-btn">下一個</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="viewer-content">
+                        <div id="youtube-player"></div>
+                        <div id="youtube-info"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 回饋表單 -->
+        <section id="contact" class="feedback-section">
+            <h2>意見回饋</h2>
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="name">姓名：</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">電子郵件：</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">意見回饋：</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">送出回饋</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 知識資源平台. 保留所有權利.</p>
+            <p>本網站使用 PDF.js 和 YouTube IFrame API</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

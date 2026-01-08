@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "filename": "web-development-guide.pdf",
+        "title": "網頁開發指南",
+        "path": "assets/pdfs/web-development-guide.pdf"
+    },
+    {
+        "id": 2,
+        "filename": "javascript-tutorial.pdf",
+        "title": "JavaScript 教學",
+        "path": "assets/pdfs/javascript-tutorial.pdf"
+    }
+]
